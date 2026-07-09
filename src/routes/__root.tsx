@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -77,27 +78,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SKY 4040 LIMITED | Walk as a Millionaire" },
+      { title: "SKY 4040 LIMITED — Luxury Tiles, Delivered in Ghana" },
       {
         name: "description",
         content:
-          "SKY 4040 LIMITED — Ghanaian manufacturer of premium wood products. Established 2024 in Takoradi, Ghana. Walk as a millionaire.",
+          "SKY 4040 LIMITED imports and distributes premium marble, porcelain, wood-look and mosaic tiles from Italy, Spain and Turkey. Order online. Delivered nationwide from Takoradi, Ghana.",
       },
       { name: "author", content: "SKY 4040 LIMITED" },
-      { property: "og:title", content: "SKY 4040 LIMITED | Walk as a Millionaire" },
+      { property: "og:title", content: "SKY 4040 LIMITED — Luxury Tiles, Delivered in Ghana" },
       {
         property: "og:description",
         content:
-          "Premium Ghanaian wood manufacturing. Established 2024 in Takoradi, Ghana.",
+          "Premium imported marble, porcelain and mosaic tiles. Order online. Delivered from Takoradi across Ghana.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@sky4040ltd" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
@@ -129,6 +132,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Toaster position="top-center" />
     </QueryClientProvider>
   );
 }
