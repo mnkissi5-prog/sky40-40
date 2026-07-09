@@ -5,20 +5,19 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * SKY 4040 LIMITED — Design system
- *
- * Palette inspired by the brand logo: deep forest green, warm wood tones,
- * Ghanaian gold, and cream. Built with oklch for perceptual uniformity.
+ * SKY 4040 LIMITED — Premium tile boutique
+ * Editorial luxury: ivory paper, deep charcoal, forest, and Ghanaian gold.
  */
 
 @theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia, serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -52,99 +51,84 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-wood: var(--wood);
-  --color-wood-light: var(--wood-light);
-  --color-wood-dark: var(--wood-dark);
   --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
+  --color-gold-soft: var(--gold-soft);
   --color-forest: var(--forest);
-  --color-cream: var(--cream);
-  --color-kente-red: var(--kente-red);
-  --color-kente-green: var(--kente-green);
-  --color-kente-gold: var(--kente-gold);
+  --color-ivory: var(--ivory);
+  --color-charcoal: var(--charcoal);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.975 0.008 85);
-  --foreground: oklch(0.22 0.045 155);
-  --card: oklch(0.985 0.006 85);
-  --card-foreground: oklch(0.22 0.045 155);
-  --popover: oklch(0.985 0.006 85);
-  --popover-foreground: oklch(0.22 0.045 155);
-  --primary: oklch(0.28 0.06 155);
-  --primary-foreground: oklch(0.975 0.008 85);
-  --secondary: oklch(0.92 0.02 85);
-  --secondary-foreground: oklch(0.28 0.06 155);
-  --muted: oklch(0.92 0.015 85);
-  --muted-foreground: oklch(0.5 0.04 155);
-  --accent: oklch(0.75 0.13 95);
-  --accent-foreground: oklch(0.22 0.045 155);
+  --radius: 0.375rem;
+  --background: oklch(0.98 0.005 85);
+  --foreground: oklch(0.18 0.01 60);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.01 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.01 60);
+  --primary: oklch(0.22 0.02 155);
+  --primary-foreground: oklch(0.98 0.005 85);
+  --secondary: oklch(0.94 0.01 85);
+  --secondary-foreground: oklch(0.22 0.02 155);
+  --muted: oklch(0.94 0.008 85);
+  --muted-foreground: oklch(0.48 0.015 60);
+  --accent: oklch(0.72 0.12 80);
+  --accent-foreground: oklch(0.18 0.01 60);
   --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.985 0.006 85);
-  --border: oklch(0.85 0.02 85);
-  --input: oklch(0.85 0.02 85);
-  --ring: oklch(0.55 0.06 155);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.9 0.008 85);
+  --input: oklch(0.9 0.008 85);
+  --ring: oklch(0.72 0.12 80);
   --chart-1: oklch(0.65 0.12 155);
   --chart-2: oklch(0.72 0.1 85);
   --chart-3: oklch(0.75 0.13 95);
   --chart-4: oklch(0.55 0.18 25);
   --chart-5: oklch(0.5 0.04 155);
-  --sidebar: oklch(0.975 0.008 85);
-  --sidebar-foreground: oklch(0.22 0.045 155);
-  --sidebar-primary: oklch(0.28 0.06 155);
-  --sidebar-primary-foreground: oklch(0.975 0.008 85);
-  --sidebar-accent: oklch(0.92 0.02 85);
-  --sidebar-accent-foreground: oklch(0.28 0.06 155);
-  --sidebar-border: oklch(0.85 0.02 85);
-  --sidebar-ring: oklch(0.55 0.06 155);
+  --sidebar: oklch(0.98 0.005 85);
+  --sidebar-foreground: oklch(0.18 0.01 60);
+  --sidebar-primary: oklch(0.22 0.02 155);
+  --sidebar-primary-foreground: oklch(0.98 0.005 85);
+  --sidebar-accent: oklch(0.94 0.01 85);
+  --sidebar-accent-foreground: oklch(0.22 0.02 155);
+  --sidebar-border: oklch(0.9 0.008 85);
+  --sidebar-ring: oklch(0.72 0.12 80);
 
   /* Brand tokens */
-  --wood: oklch(0.68 0.08 75);
-  --wood-light: oklch(0.82 0.05 80);
-  --wood-dark: oklch(0.48 0.07 70);
-  --gold: oklch(0.75 0.14 95);
-  --gold-light: oklch(0.88 0.1 95);
-  --forest: oklch(0.28 0.06 155);
-  --cream: oklch(0.975 0.008 85);
-  --kente-red: oklch(0.55 0.2 25);
-  --kente-green: oklch(0.45 0.1 155);
-  --kente-gold: oklch(0.75 0.14 95);
+  --gold: oklch(0.72 0.12 80);
+  --gold-soft: oklch(0.9 0.06 85);
+  --forest: oklch(0.32 0.05 155);
+  --ivory: oklch(0.98 0.005 85);
+  --charcoal: oklch(0.18 0.01 60);
 }
 
 .dark {
-  --background: oklch(0.18 0.03 155);
-  --foreground: oklch(0.95 0.01 85);
-  --card: oklch(0.22 0.04 155);
-  --card-foreground: oklch(0.95 0.01 85);
-  --popover: oklch(0.22 0.04 155);
-  --popover-foreground: oklch(0.95 0.01 85);
-  --primary: oklch(0.75 0.12 95);
-  --primary-foreground: oklch(0.18 0.03 155);
-  --secondary: oklch(0.28 0.05 155);
-  --secondary-foreground: oklch(0.95 0.01 85);
-  --muted: oklch(0.28 0.04 155);
-  --muted-foreground: oklch(0.7 0.03 85);
-  --accent: oklch(0.65 0.12 95);
-  --accent-foreground: oklch(0.18 0.03 155);
+  --background: oklch(0.14 0.01 60);
+  --foreground: oklch(0.96 0.005 85);
+  --card: oklch(0.18 0.01 60);
+  --card-foreground: oklch(0.96 0.005 85);
+  --popover: oklch(0.18 0.01 60);
+  --popover-foreground: oklch(0.96 0.005 85);
+  --primary: oklch(0.72 0.12 80);
+  --primary-foreground: oklch(0.14 0.01 60);
+  --secondary: oklch(0.24 0.01 60);
+  --secondary-foreground: oklch(0.96 0.005 85);
+  --muted: oklch(0.24 0.01 60);
+  --muted-foreground: oklch(0.7 0.01 60);
+  --accent: oklch(0.72 0.12 80);
+  --accent-foreground: oklch(0.14 0.01 60);
   --destructive: oklch(0.65 0.18 25);
-  --destructive-foreground: oklch(0.95 0.01 85);
-  --border: oklch(0.3 0.04 155);
-  --input: oklch(0.3 0.04 155);
-  --ring: oklch(0.75 0.1 95);
-  --chart-1: oklch(0.75 0.12 95);
-  --chart-2: oklch(0.55 0.1 75);
-  --chart-3: oklch(0.65 0.12 95);
-  --chart-4: oklch(0.7 0.16 25);
-  --chart-5: oklch(0.75 0.08 85);
-  --sidebar: oklch(0.22 0.04 155);
-  --sidebar-foreground: oklch(0.95 0.01 85);
-  --sidebar-primary: oklch(0.75 0.12 95);
-  --sidebar-primary-foreground: oklch(0.18 0.03 155);
-  --sidebar-accent: oklch(0.28 0.05 155);
-  --sidebar-accent-foreground: oklch(0.95 0.01 85);
-  --sidebar-border: oklch(0.3 0.04 155);
-  --sidebar-ring: oklch(0.75 0.1 95);
+  --destructive-foreground: oklch(0.96 0.005 85);
+  --border: oklch(0.28 0.01 60);
+  --input: oklch(0.28 0.01 60);
+  --ring: oklch(0.72 0.12 80);
+  --sidebar: oklch(0.18 0.01 60);
+  --sidebar-foreground: oklch(0.96 0.005 85);
+  --sidebar-primary: oklch(0.72 0.12 80);
+  --sidebar-primary-foreground: oklch(0.14 0.01 60);
+  --sidebar-accent: oklch(0.24 0.01 60);
+  --sidebar-accent-foreground: oklch(0.96 0.005 85);
+  --sidebar-border: oklch(0.28 0.01 60);
+  --sidebar-ring: oklch(0.72 0.12 80);
 }
 
 @layer base {
@@ -155,10 +139,18 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -167,27 +159,16 @@
     text-wrap: balance;
   }
 
-  .kente-stripe {
-    background: repeating-linear-gradient(
+  .kente-hairline {
+    background: linear-gradient(
       90deg,
-      var(--kente-red) 0px,
-      var(--kente-red) 12px,
-      var(--kente-gold) 12px,
-      var(--kente-gold) 24px,
-      var(--kente-green) 24px,
-      var(--kente-green) 36px,
-      var(--kente-gold) 36px,
-      var(--kente-gold) 48px
+      var(--forest) 0 33.3%,
+      var(--gold) 33.3% 66.6%,
+      oklch(0.5 0.18 25) 66.6% 100%
     );
   }
 
-  .wood-grain {
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 8px,
-      color-mix(in oklch, var(--wood) 8%, transparent) 8px,
-      color-mix(in oklch, var(--wood) 8%, transparent) 16px
-    );
+  .fade-mask-b {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   }
 }
