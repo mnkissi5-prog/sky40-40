@@ -76,8 +76,8 @@ const products: Product[] = [
   {
     id: "carrara-statuario",
     name: "Statuario Bianco",
-    collection: "Carrara Signature",
-    origin: "Carrara, Italy",
+    collection: "Signature Marble Series",
+    origin: "Crafted in Egyam, Takoradi",
     size: "600 × 1200 mm",
     finish: "Polished",
     pricePerSqm: 480,
@@ -89,7 +89,7 @@ const products: Product[] = [
     id: "sahara-porcelain",
     name: "Sahara Sand",
     collection: "Desert Stone",
-    origin: "Castellón, Spain",
+    origin: "Crafted in Egyam, Takoradi",
     size: "800 × 800 mm",
     finish: "Matte",
     pricePerSqm: 210,
@@ -100,7 +100,7 @@ const products: Product[] = [
     id: "walnut-plank",
     name: "Walnut Reserve",
     collection: "Heritage Wood",
-    origin: "Bologna, Italy",
+    origin: "Crafted in Egyam, Takoradi",
     size: "200 × 1200 mm",
     finish: "Textured",
     pricePerSqm: 265,
@@ -112,7 +112,7 @@ const products: Product[] = [
     id: "terrazzo-oro",
     name: "Terrazzo Oro",
     collection: "Atelier",
-    origin: "Vicenza, Italy",
+    origin: "Crafted in Egyam, Takoradi",
     size: "600 × 600 mm",
     finish: "Honed",
     pricePerSqm: 395,
@@ -123,7 +123,7 @@ const products: Product[] = [
     id: "onyx-slate",
     name: "Onyx Slate",
     collection: "Noir",
-    origin: "İzmir, Türkiye",
+    origin: "Crafted in Egyam, Takoradi",
     size: "300 × 900 mm",
     finish: "Riven",
     pricePerSqm: 240,
@@ -134,7 +134,7 @@ const products: Product[] = [
     id: "emerald-mosaic",
     name: "Emerald Kente",
     collection: "Atelier",
-    origin: "Valencia, Spain",
+    origin: "Crafted in Egyam, Takoradi",
     size: "300 × 300 mm sheet",
     finish: "Gloss + Gold Grout",
     pricePerSqm: 620,
@@ -157,9 +157,9 @@ type Category = (typeof categories)[number];
 
 const navLinks = [
   { label: "Collections", href: "#collections" },
-  { label: "Origins", href: "#origins" },
-  { label: "Showroom", href: "#showroom" },
-  { label: "Journal", href: "#journal" },
+  { label: "Craftsmanship", href: "#origins" },
+  { label: "How to Order", href: "#showroom" },
+  { label: "Reviews", href: "#journal" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -376,10 +376,10 @@ function Index() {
                 <em className="not-italic text-gold">walk as a millionaire.</em>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">
-                SKY 4040 LIMITED curates the world's finest tiles — hand-picked from
-                Italy, Spain and Türkiye — and delivers them to your home or project
-                site anywhere in Ghana. Order online, sample in showroom, install with
-                confidence.
+                SKY 4040 LIMITED manufactures premium tiles in Egyam, Takoradi —
+                using imported raw materials from Italy, Spain and Türkiye,
+                finished by Ghanaian hands. Order online. Delivered to your
+                door, anywhere in Ghana.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a href="#collections">
@@ -388,17 +388,17 @@ function Index() {
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </a>
-                <a href="#showroom">
+                <a href="#contact">
                   <Button size="lg" variant="outline" className="h-12 gap-2 rounded-full border-ivory/40 bg-transparent px-7 text-ivory hover:bg-ivory/10 hover:text-ivory">
-                    Book a showroom visit
+                    Request a quote
                   </Button>
                 </a>
               </div>
 
               <dl className="mt-14 grid max-w-2xl grid-cols-3 gap-6 border-t border-ivory/15 pt-8">
                 {[
-                  { k: "6", v: "Signature collections" },
-                  { k: "3", v: "Source countries" },
+                  { k: "100%", v: "Made in Ghana" },
+                  { k: "3", v: "Material source countries" },
                   { k: "48h", v: "Accra & Kumasi delivery" },
                 ].map((s) => (
                   <div key={s.v}>
@@ -418,10 +418,10 @@ function Index() {
         <section className="border-b border-border bg-secondary/40">
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:grid-cols-4 sm:px-6 lg:px-8">
             {[
-              { icon: Globe2, label: "Imported from Italy, Spain & Türkiye" },
+              { icon: Globe2, label: "Imported raw materials, Ghanaian manufacture" },
               { icon: ShieldCheck, label: "PEI IV commercial-grade rated" },
-              { icon: Truck, label: "Nationwide delivery from Takoradi" },
-              { icon: Award, label: "10-year manufacturer warranty" },
+              { icon: Truck, label: "Nationwide delivery from Egyam, Takoradi" },
+              { icon: Award, label: "10-year workmanship warranty" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-start gap-3">
                 <Icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
@@ -445,8 +445,10 @@ function Index() {
                   Tiles chosen with intention.
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  Every piece in our catalogue is sourced from a mill we've visited,
-                  tested for Ghana's climate, and priced for lifelong ownership.
+                  Every tile is pressed, fired and finished at our Egyam,
+                  Takoradi plant — using raw materials sourced from the world's
+                  most respected quarries and mills, then engineered for Ghana's
+                  climate.
                 </p>
               </div>
               <div className="hidden md:block">
@@ -540,26 +542,27 @@ function Index() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-                  Our Origins
+                  Craftsmanship
                 </p>
                 <h2 className="mt-3 font-serif text-4xl leading-tight sm:text-5xl">
-                  Imported by us.
+                  Imported materials.
                   <br />
-                  Curated for Ghana.
+                  Made in Ghana.
                 </h2>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/75">
-                  We are not a factory — we are a Ghanaian house of taste. Our
-                  founders travel to Italy, Spain and Türkiye each season to walk
-                  the mills, pull samples, and negotiate directly. That's how we
-                  keep world-class quality within reach of Ghanaian homes and
-                  contractors.
+                  SKY 4040 is a Ghanaian manufacturer. We import the finest raw
+                  materials — Italian marble powder, Spanish porcelain clays,
+                  Turkish natural stone aggregates — and press, glaze and fire
+                  every tile at our plant in Egyam, Takoradi. The result is
+                  world-class quality, produced by Ghanaian hands, priced for
+                  Ghanaian projects.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  { c: "Italy", d: "Marble, terrazzo, wood-look porcelain" },
-                  { c: "Spain", d: "Large-format porcelain, mosaics" },
-                  { c: "Türkiye", d: "Natural slate & travertine" },
+                  { c: "Italy", d: "Marble powders & terrazzo aggregates" },
+                  { c: "Spain", d: "Porcelain clays & mineral glazes" },
+                  { c: "Türkiye", d: "Natural slate & travertine stone" },
                 ].map((o) => (
                   <div key={o.c} className="border border-ivory/15 p-6">
                     <p className="font-serif text-2xl text-ivory">{o.c}</p>
@@ -573,18 +576,17 @@ function Index() {
                     <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
                     <div>
                       <p className="font-serif text-xl text-ivory">
-                        Warehoused in Takoradi
+                        Manufactured in Egyam, Takoradi
                       </p>
                       <p className="mt-1 text-xs leading-relaxed text-ivory/70">
-                        Our climate-controlled facility in the Western Region
-                        holds full pallets ready for same-week dispatch across
-                        Ghana and ECOWAS.
+                        Our production plant in the Western Region presses and
+                        fires every tile in-house, with pallets dispatched
+                        directly to sites across Ghana and ECOWAS.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </section>
 
@@ -644,7 +646,7 @@ function Index() {
                 { n: "01", t: "Browse online", d: "Filter by material, finish and format. Add to cart in m²." },
                 { n: "02", t: "Request samples", d: "We courier three free swatches anywhere in Ghana." },
                 { n: "03", t: "Order & pay", d: "Momo, bank transfer or card. 30-day terms for trade accounts." },
-                { n: "04", t: "Delivered & fitted", d: "48h to Accra & Kumasi. Certified fitters on request." },
+                { n: "04", t: "Delivered to site", d: "Dispatched from our Egyam, Takoradi plant. 48h to Accra & Kumasi." },
               ].map((s) => (
                 <li key={s.n} className="border-l-2 border-gold bg-background p-6">
                   <p className="font-serif text-3xl text-gold">{s.n}</p>
@@ -720,13 +722,16 @@ function Index() {
                   <MapPin className="h-5 w-5 text-gold" />
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
-                      Showroom
+                      Factory & orders
                     </p>
                     <p className="font-serif text-2xl">
-                      Harbour Road, Takoradi
+                      Egyam, Takoradi
                     </p>
                     <p className="text-xs text-ivory/70">
-                      Mon–Sat · 8:00 – 18:00 GMT
+                      Western Region, Ghana · Mon–Sat, 8:00–17:00 GMT
+                    </p>
+                    <p className="mt-1 text-xs text-ivory/60">
+                      By appointment only — no walk-in showroom.
                     </p>
                   </div>
                 </div>
@@ -817,8 +822,8 @@ function Index() {
                   </div>
                 </div>
                 <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  A Ghanaian house importing and delivering the world's finest
-                  tiles. Walk as a millionaire.
+                  Ghanaian-manufactured tiles, produced in Egyam, Takoradi from
+                  the finest imported raw materials. Walk as a millionaire.
                 </p>
               </div>
               <div>
@@ -842,7 +847,7 @@ function Index() {
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   <li>020 816 7576</li>
                   <li>orders@sky4040.gh</li>
-                  <li>Harbour Road, Takoradi</li>
+                  <li>Egyam, Takoradi · Ghana</li>
                 </ul>
               </div>
             </div>

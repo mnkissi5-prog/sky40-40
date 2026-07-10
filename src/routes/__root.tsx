@@ -78,18 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SKY 4040 LIMITED — Luxury Tiles, Delivered in Ghana" },
+      { title: "SKY 4040 LIMITED — Premium Tiles, Made in Ghana" },
       {
         name: "description",
         content:
-          "SKY 4040 LIMITED imports and distributes premium marble, porcelain, wood-look and mosaic tiles from Italy, Spain and Turkey. Order online. Delivered nationwide from Takoradi, Ghana.",
+          "SKY 4040 LIMITED manufactures premium marble, porcelain, wood-look and mosaic tiles in Egyam, Takoradi — using imported raw materials from Italy, Spain and Türkiye. Order online. Delivered nationwide.",
       },
       { name: "author", content: "SKY 4040 LIMITED" },
-      { property: "og:title", content: "SKY 4040 LIMITED — Luxury Tiles, Delivered in Ghana" },
+      { property: "og:title", content: "SKY 4040 LIMITED — Premium Tiles, Made in Ghana" },
       {
         property: "og:description",
         content:
-          "Premium imported marble, porcelain and mosaic tiles. Order online. Delivered from Takoradi across Ghana.",
+          "Ghanaian-manufactured premium tiles from Egyam, Takoradi. Imported raw materials, world-class quality. Order online, delivered nationwide.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
