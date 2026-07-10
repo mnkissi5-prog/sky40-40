@@ -78,18 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SKY 4040 LIMITED — Premium Tiles, Made in Ghana" },
+      { title: "SKY 4040 LIMITED — Tile & SPC Flooring Manufacturer, Ghana" },
       {
         name: "description",
         content:
-          "SKY 4040 LIMITED manufactures premium marble, porcelain, wood-look and mosaic tiles in Egyam, Takoradi — using imported raw materials from Italy, Spain and Türkiye. Order online. Delivered nationwide.",
+          "SKY 40 - 40 Company Ltd is a Ghanaian factory manufacturing premium marble, porcelain, terrazzo, slate, mosaic and SPC wood-look flooring in Egyam, Takoradi. Trade & project supply nationwide.",
       },
-      { name: "author", content: "SKY 4040 LIMITED" },
-      { property: "og:title", content: "SKY 4040 LIMITED — Premium Tiles, Made in Ghana" },
+      { name: "author", content: "SKY 40 - 40 Company Ltd" },
+      { property: "og:title", content: "SKY 4040 LIMITED — Tile & SPC Flooring Manufacturer, Ghana" },
       {
         property: "og:description",
         content:
-          "Ghanaian-manufactured premium tiles from Egyam, Takoradi. Imported raw materials, world-class quality. Order online, delivered nationwide.",
+          "Ghanaian tile & SPC flooring factory in Egyam, Takoradi. Imported raw materials, manufactured in Ghana. Direct-from-factory supply for developers, contractors and retailers.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
