@@ -668,6 +668,16 @@ function Index() {
                   />
                 </div>
                 <div className="space-y-1.5">
+                  <Label htmlFor="q-company" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
+                    Company name
+                  </Label>
+                  <Input
+                    id="q-company"
+                    placeholder="Company / project name"
+                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
+                  />
+                </div>
+                <div className="space-y-1.5">
                   <Label htmlFor="q-phone" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
                     Phone
                   </Label>
@@ -678,7 +688,7 @@ function Index() {
                     className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
                   />
                 </div>
-                <div className="space-y-1.5 sm:col-span-2">
+                <div className="space-y-1.5">
                   <Label htmlFor="q-email" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
                     Email
                   </Label>
