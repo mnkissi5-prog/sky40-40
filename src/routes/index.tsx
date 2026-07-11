@@ -762,7 +762,21 @@ function Index() {
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   <li>{PHONE_DISPLAY}</li>
                   <li className="break-all">{EMAIL}</li>
+                  <li>{FACTORY_PLUSCODE}</li>
                   <li>Egyam, Takoradi · Ghana</li>
+                  <li>
+                    <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
+                      <Instagram className="h-3.5 w-3.5" /> @{INSTAGRAM}
+                    </a>
+                  </li>
+                </ul>
+                <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground">
+                  Legal
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                  <li><Link to="/refund-policy" className="hover:text-foreground">No Refund Policy</Link></li>
+                  <li><Link to="/privacy-policy" className="hover:text-foreground">Privacy Policy</Link></li>
+                  <li><Link to="/terms" className="hover:text-foreground">Terms & Conditions</Link></li>
                 </ul>
               </div>
             </div>
@@ -773,6 +787,7 @@ function Index() {
           </div>
         </footer>
       </main>
+      <CompanyChat />
     </div>
   );
 }
