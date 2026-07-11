@@ -472,6 +472,34 @@ function Index() {
           </div>
         </section>
 
+        {/* What makes us unique */}
+        <section id="unique" className="border-t border-border bg-ivory/40 py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
+                What makes us unique
+              </p>
+              <h2 className="mt-3 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+                Why choose SKY 4040 SPC flooring.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Anti-slippery, fire resistant, sound insulating, stain resistant,
+                non-volatile, water resistant, highly durable, easy to install
+                and scratch resistant — engineered to outperform conventional
+                tiles and natural stone.
+              </p>
+            </div>
+            <div className="mt-12 overflow-hidden rounded-xl border border-border bg-background shadow-sm">
+              <img
+                src={whyChooseImg.url}
+                alt="Why choose SKY 4040 SPC flooring — anti-slippery, fire resistant, sound insulation, stain resistant, water resistant, highly durable, easy to install and scratch resistant"
+                className="w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Trade / how to order */}
         <section id="trade" className="border-t border-border bg-secondary/40 py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
