@@ -91,7 +91,7 @@ function Index() {
   const filtered =
     activeCategory === "All"
       ? products
-      : products.filter((p) => p.category === activeCategory);
+      : products.filter((p) => p.tone === activeCategory);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
