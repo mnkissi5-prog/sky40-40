@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Award,
   Factory,
   Globe2,
+  Instagram,
   Mail,
   MapPin,
   Menu,
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { CompanyChat } from "@/components/CompanyChat";
+import whyChooseImg from "@/assets/why-choose-sky4040.png.asset.json";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
