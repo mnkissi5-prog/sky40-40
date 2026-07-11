@@ -601,23 +601,44 @@ function Index() {
                     </p>
                   </div>
                 </a>
-                <div className="flex items-center gap-4">
+                <a
+                  href={MAP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4 border-b border-ivory/15 pb-5"
+                >
                   <MapPin className="h-5 w-5 text-gold" />
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
-                      Factory
+                      Factory address
                     </p>
-                    <p className="font-serif text-2xl">
-                      Egyam, Takoradi
+                    <p className="font-serif text-2xl group-hover:text-gold">
+                      {FACTORY_PLUSCODE}
                     </p>
                     <p className="text-xs text-ivory/70">
-                      Western Region, Ghana · Mon–Sat, 8:00–17:00 GMT
+                      Egyam · Takoradi · Western Region, Ghana · Mon–Sat, 8:00–17:00 GMT
                     </p>
                     <p className="mt-1 text-xs text-ivory/60">
                       Trade buyers welcome by appointment — no walk-in showroom.
                     </p>
                   </div>
-                </div>
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4"
+                >
+                  <Instagram className="h-5 w-5 text-gold" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
+                      Instagram
+                    </p>
+                    <p className="font-serif text-2xl text-ivory group-hover:text-gold">
+                      @{INSTAGRAM}
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
 
