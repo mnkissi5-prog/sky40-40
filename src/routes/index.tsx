@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Award,
   Factory,
   Globe2,
+  Instagram,
   Mail,
   MapPin,
   Menu,
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { CompanyChat } from "@/components/CompanyChat";
+import whyChooseImg from "@/assets/why-choose-sky4040.png.asset.json";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -75,7 +78,7 @@ type Category = (typeof categories)[number];
 const navLinks = [
   { label: "Catalogue", href: "#catalogue" },
   { label: "The Factory", href: "#factory" },
-  { label: "Capabilities", href: "#capabilities" },
+  { label: "Why Us", href: "#unique" },
   { label: "Trade & Projects", href: "#trade" },
   { label: "Contact", href: "#contact" },
 ];
@@ -83,6 +86,10 @@ const navLinks = [
 const PHONE_DISPLAY = "020 816 7576";
 const PHONE_TEL = "+233208167576";
 const EMAIL = "SKY4040a1@gmail.com";
+const INSTAGRAM = "sky4040_gh";
+const INSTAGRAM_URL = "https://instagram.com/sky4040_gh";
+const FACTORY_PLUSCODE = "V4HW+WQR, Beahu";
+const MAP_URL = "https://www.google.com/maps/search/?api=1&query=V4HW%2BWQR+Beahu+Takoradi";
 
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -469,6 +476,34 @@ function Index() {
           </div>
         </section>
 
+        {/* What makes us unique */}
+        <section id="unique" className="border-t border-border bg-ivory/40 py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
+                What makes us unique
+              </p>
+              <h2 className="mt-3 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+                Why choose SKY 4040 SPC flooring.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Anti-slippery, fire resistant, sound insulating, stain resistant,
+                non-volatile, water resistant, highly durable, easy to install
+                and scratch resistant — engineered to outperform conventional
+                tiles and natural stone.
+              </p>
+            </div>
+            <div className="mt-12 overflow-hidden rounded-xl border border-border bg-background shadow-sm">
+              <img
+                src={whyChooseImg.url}
+                alt="Why choose SKY 4040 SPC flooring — anti-slippery, fire resistant, sound insulation, stain resistant, water resistant, highly durable, easy to install and scratch resistant"
+                className="w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Trade / how to order */}
         <section id="trade" className="border-t border-border bg-secondary/40 py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -566,23 +601,44 @@ function Index() {
                     </p>
                   </div>
                 </a>
-                <div className="flex items-center gap-4">
+                <a
+                  href={MAP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4 border-b border-ivory/15 pb-5"
+                >
                   <MapPin className="h-5 w-5 text-gold" />
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
-                      Factory
+                      Factory address
                     </p>
-                    <p className="font-serif text-2xl">
-                      Egyam, Takoradi
+                    <p className="font-serif text-2xl group-hover:text-gold">
+                      {FACTORY_PLUSCODE}
                     </p>
                     <p className="text-xs text-ivory/70">
-                      Western Region, Ghana · Mon–Sat, 8:00–17:00 GMT
+                      Egyam · Takoradi · Western Region, Ghana · Mon–Sat, 8:00–17:00 GMT
                     </p>
                     <p className="mt-1 text-xs text-ivory/60">
                       Trade buyers welcome by appointment — no walk-in showroom.
                     </p>
                   </div>
-                </div>
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4"
+                >
+                  <Instagram className="h-5 w-5 text-gold" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
+                      Instagram
+                    </p>
+                    <p className="font-serif text-2xl text-ivory group-hover:text-gold">
+                      @{INSTAGRAM}
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -612,6 +668,16 @@ function Index() {
                   />
                 </div>
                 <div className="space-y-1.5">
+                  <Label htmlFor="q-company" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
+                    Company name
+                  </Label>
+                  <Input
+                    id="q-company"
+                    placeholder="Company / project name"
+                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
+                  />
+                </div>
+                <div className="space-y-1.5">
                   <Label htmlFor="q-phone" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
                     Phone
                   </Label>
@@ -622,7 +688,7 @@ function Index() {
                     className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
                   />
                 </div>
-                <div className="space-y-1.5 sm:col-span-2">
+                <div className="space-y-1.5">
                   <Label htmlFor="q-email" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
                     Email
                   </Label>
@@ -696,7 +762,21 @@ function Index() {
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   <li>{PHONE_DISPLAY}</li>
                   <li className="break-all">{EMAIL}</li>
+                  <li>{FACTORY_PLUSCODE}</li>
                   <li>Egyam, Takoradi · Ghana</li>
+                  <li>
+                    <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
+                      <Instagram className="h-3.5 w-3.5" /> @{INSTAGRAM}
+                    </a>
+                  </li>
+                </ul>
+                <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground">
+                  Legal
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                  <li><Link to="/refund-policy" className="hover:text-foreground">No Refund Policy</Link></li>
+                  <li><Link to="/privacy-policy" className="hover:text-foreground">Privacy Policy</Link></li>
+                  <li><Link to="/terms" className="hover:text-foreground">Terms & Conditions</Link></li>
                 </ul>
               </div>
             </div>
@@ -707,6 +787,7 @@ function Index() {
           </div>
         </footer>
       </main>
+      <CompanyChat />
     </div>
   );
 }
