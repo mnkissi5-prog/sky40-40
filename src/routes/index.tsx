@@ -25,17 +25,23 @@ import { Badge } from "@/components/ui/badge";
 
 import logoAsset from "@/assets/sky4040-logo.png.asset.json";
 import heroShowroom from "@/assets/hero-showroom.jpg";
-import tileMarble from "@/assets/tile-marble.jpg";
-import tilePorcelain from "@/assets/tile-porcelain.jpg";
-import tileWood from "@/assets/tile-wood.jpg";
-import tileTerrazzo from "@/assets/tile-terrazzo.jpg";
-import tileSlate from "@/assets/tile-slate.jpg";
-import tileMosaic from "@/assets/tile-mosaic.jpg";
+import spcDarkWalnut from "@/assets/spc-dark-walnut.jpg";
+import spcPinewood from "@/assets/spc-pinewood.jpg";
+import spcSierraOak from "@/assets/spc-sierra-oak.jpg";
+import spcAntiqueWalnut from "@/assets/spc-antique-walnut.jpg";
+import spcHazelnut from "@/assets/spc-hazelnut.jpg";
+import spcSandstoneOak from "@/assets/spc-sandstone-oak.jpg";
+import spcRusticGrey from "@/assets/spc-rustic-grey.jpg";
+import spcClassicWalnut from "@/assets/spc-classic-walnut.jpg";
+import spcNordikOak from "@/assets/spc-nordik-oak.jpg";
+import spcHeritageTeak from "@/assets/spc-heritage-teak.jpg";
+import spcDriftwoodOak from "@/assets/spc-driftwood-oak.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
+type Tone = "Dark" | "Warm" | "Light" | "Grey";
 type Product = {
   id: string;
   name: string;
@@ -43,79 +49,27 @@ type Product = {
   size: string;
   finish: string;
   image: string;
-  category: "Marble" | "Porcelain" | "Wood-Look" | "Terrazzo" | "Slate" | "Mosaic";
+  tone: Tone;
   tag?: string;
 };
 
+const SPC_SPEC = "1220 × 183 × 5.5 mm / 20 mil";
+
 const products: Product[] = [
-  {
-    id: "carrara-statuario",
-    name: "Statuario Bianco",
-    collection: "Signature Marble Series",
-    size: "600 × 1200 mm",
-    finish: "Polished",
-    image: tileMarble,
-    category: "Marble",
-    tag: "Flagship",
-  },
-  {
-    id: "sahara-porcelain",
-    name: "Sahara Sand",
-    collection: "Desert Stone",
-    size: "800 × 800 mm",
-    finish: "Matte",
-    image: tilePorcelain,
-    category: "Porcelain",
-  },
-  {
-    id: "walnut-plank",
-    name: "Walnut Reserve",
-    collection: "Heritage Wood",
-    size: "1220 × 183 × 5.5 mm",
-    finish: "Textured SPC",
-    image: tileWood,
-    category: "Wood-Look",
-    tag: "New line",
-  },
-  {
-    id: "terrazzo-oro",
-    name: "Terrazzo Oro",
-    collection: "Atelier",
-    size: "600 × 600 mm",
-    finish: "Honed",
-    image: tileTerrazzo,
-    category: "Terrazzo",
-  },
-  {
-    id: "onyx-slate",
-    name: "Onyx Slate",
-    collection: "Noir",
-    size: "300 × 900 mm",
-    finish: "Riven",
-    image: tileSlate,
-    category: "Slate",
-  },
-  {
-    id: "emerald-mosaic",
-    name: "Emerald Kente",
-    collection: "Atelier",
-    size: "300 × 300 mm sheet",
-    finish: "Gloss + Gold Grout",
-    image: tileMosaic,
-    category: "Mosaic",
-    tag: "Signature",
-  },
+  { id: "dark-walnut", name: "Dark Walnut", collection: "Heritage SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcDarkWalnut, tone: "Dark", tag: "Best seller" },
+  { id: "antique-walnut", name: "Antique Walnut", collection: "Heritage SPC", size: SPC_SPEC, finish: "Uniclic lock · Embossed", image: spcAntiqueWalnut, tone: "Warm" },
+  { id: "classic-walnut", name: "Classic Walnut", collection: "Heritage SPC", size: SPC_SPEC, finish: "Uniclic lock · Satin", image: spcClassicWalnut, tone: "Warm" },
+  { id: "heritage-teak", name: "Heritage Teak", collection: "Heritage SPC", size: SPC_SPEC, finish: "Uniclic lock · Embossed", image: spcHeritageTeak, tone: "Warm", tag: "Signature" },
+  { id: "pinewood", name: "Pinewood", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcPinewood, tone: "Light" },
+  { id: "sierra-oak", name: "Sierra Oak", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcSierraOak, tone: "Light" },
+  { id: "hazelnut", name: "Hazelnut", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Soft matte", image: spcHazelnut, tone: "Light" },
+  { id: "sandstone-oak", name: "Sandstone Oak", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcSandstoneOak, tone: "Light" },
+  { id: "nordik-oak", name: "Nordik Oak", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcNordikOak, tone: "Light", tag: "New" },
+  { id: "rustic-grey", name: "Rustic Grey", collection: "Contemporary SPC", size: SPC_SPEC, finish: "Uniclic lock · Embossed", image: spcRusticGrey, tone: "Grey" },
+  { id: "driftwood-oak", name: "Driftwood Oak", collection: "Contemporary SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcDriftwoodOak, tone: "Grey" },
 ];
 
-const categories = [
-  "All",
-  "Marble",
-  "Porcelain",
-  "Wood-Look",
-  "Terrazzo",
-  "Slate",
-  "Mosaic",
-] as const;
+const categories = ["All", "Light", "Warm", "Dark", "Grey"] as const;
 type Category = (typeof categories)[number];
 
 const navLinks = [
@@ -137,7 +91,7 @@ function Index() {
   const filtered =
     activeCategory === "All"
       ? products
-      : products.filter((p) => p.category === activeCategory);
+      : products.filter((p) => p.tone === activeCategory);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
