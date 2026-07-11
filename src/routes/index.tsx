@@ -78,7 +78,7 @@ type Category = (typeof categories)[number];
 const navLinks = [
   { label: "Catalogue", href: "#catalogue" },
   { label: "The Factory", href: "#factory" },
-  { label: "Capabilities", href: "#capabilities" },
+  { label: "Why Us", href: "#unique" },
   { label: "Trade & Projects", href: "#trade" },
   { label: "Contact", href: "#contact" },
 ];
@@ -86,6 +86,10 @@ const navLinks = [
 const PHONE_DISPLAY = "020 816 7576";
 const PHONE_TEL = "+233208167576";
 const EMAIL = "SKY4040a1@gmail.com";
+const INSTAGRAM = "sky4040_gh";
+const INSTAGRAM_URL = "https://instagram.com/sky4040_gh";
+const FACTORY_PLUSCODE = "V4HW+WQR, Beahu";
+const MAP_URL = "https://www.google.com/maps/search/?api=1&query=V4HW%2BWQR+Beahu+Takoradi";
 
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
