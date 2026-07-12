@@ -221,11 +221,13 @@ function Index() {
                 <em className="not-italic text-gold">manufacturer.</em>
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory/80 sm:text-lg">
-                SKY 40 - 40 Company Ltd is a Ghanaian factory producing marble,
-                porcelain, terrazzo, slate, mosaic and SPC wood-look flooring at
-                our plant in Egyam, Takoradi — using imported raw materials from
-                Italy, Spain and Türkiye. We supply developers, contractors,
-                architects and retailers nationwide.
+                SKY 40 - 40 Company Ltd is a Ghanaian factory producing pine
+                wood, rustic grey, hazelnut, classic walnut, nordic grey and SPC
+                wood-look flooring at our plant in Egyam, Takoradi — using
+                imported raw materials from trusted companies all around the
+                world, we believe have the best SPC tiles on the market. We
+                supply developers, contractors, architects and retailers
+                nationwide.
                 <span className="mt-3 block font-serif text-xl not-italic text-gold">
                   Walk as a millionaire.
                 </span>
