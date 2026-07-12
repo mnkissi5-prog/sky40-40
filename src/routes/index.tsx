@@ -93,6 +93,46 @@ const INSTAGRAM_URL = "https://instagram.com/sky4040_gh";
 const FACTORY_PLUSCODE = "V4HW+WQR, Beahu";
 const MAP_URL = "https://www.google.com/maps/search/?api=1&query=V4HW%2BWQR+Beahu+Takoradi";
 
+const proverbs = [
+  {
+    twi: "Dua kor gye mframa a, ebu.",
+    en: "A single tree cannot withstand the storm.",
+  },
+  {
+    twi: "Nsa baako nkura adesoa.",
+    en: "One hand alone cannot lift a heavy load — we build together.",
+  },
+  {
+    twi: "Praeɛ, wɔka wɔn baako a wobu, wɔka wɔn nyinaa a emmu.",
+    en: "A single broom stick breaks; a bundle stands strong.",
+  },
+  {
+    twi: "Tiri nkwa nyɛ abakan.",
+    en: "Life is long — build for generations, not for a season.",
+  },
+];
+
+function GhanaFlag({ className = "h-4 w-6" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 60 40"
+      className={className}
+      aria-label="Flag of Ghana"
+      role="img"
+    >
+      <rect width="60" height="40" fill="#ce1126" />
+      <rect y="13.33" width="60" height="13.34" fill="#fcd116" />
+      <rect y="26.67" width="60" height="13.33" fill="#006b3f" />
+      <polygon
+        points="30,15.5 31.76,20.9 37.44,20.9 32.84,24.24 34.6,29.64 30,26.3 25.4,29.64 27.16,24.24 22.56,20.9 28.24,20.9"
+        fill="#000"
+      />
+    </svg>
+  );
+}
+
+
+
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<Category>("All");
