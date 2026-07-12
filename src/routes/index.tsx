@@ -250,11 +250,13 @@ function Index() {
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-12 lg:px-8 lg:py-40">
             <div className="lg:col-span-8">
               <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-ivory/25 bg-ivory/5 px-4 py-1.5 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] shadow-sm ring-1 ring-ivory/30" />
                 <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-ivory/90">
                   Est. 2024 · Manufactured in Takoradi, Ghana
                 </span>
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] shadow-sm ring-1 ring-ivory/30" />
               </div>
+
               <h1 className="font-serif text-balance text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl">
                 Ghana's premium tile
                 <br />
