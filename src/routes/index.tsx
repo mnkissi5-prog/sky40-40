@@ -18,7 +18,8 @@ import {
 import { useState } from "react";
 import { toast } from "sonner";
 import { CompanyChat } from "@/components/CompanyChat";
-import whyChooseImg from "@/assets/why-choose-sky4040.png.asset.json";
+import whyChooseImg from "@/assets/spc-why-choose.png.asset.json";
+import layerStructureImg from "@/assets/spc-layer-structure.png.asset.json";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -77,6 +78,7 @@ type Category = (typeof categories)[number];
 
 const navLinks = [
   { label: "Catalogue", href: "#catalogue" },
+  { label: "What is SPC?", href: "#what-is-spc" },
   { label: "The Factory", href: "#factory" },
   { label: "Why Us", href: "#unique" },
   { label: "Trade & Projects", href: "#trade" },
