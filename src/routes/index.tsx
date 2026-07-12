@@ -164,13 +164,15 @@ function Index() {
               className="h-11 w-auto object-contain"
             />
             <span className="hidden sm:block">
-              <span className="block text-base font-semibold leading-none tracking-tight text-foreground">
+              <span className="flex items-center gap-2 text-base font-semibold leading-none tracking-tight text-foreground">
                 SKY 4040
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
               </span>
               <span className="mt-1 block text-[10px] font-medium leading-none tracking-[0.35em] text-muted-foreground">
                 LIMITED · MANUFACTURER
               </span>
             </span>
+
           </a>
 
           <nav className="hidden items-center gap-7 md:flex">
