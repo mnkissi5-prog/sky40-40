@@ -487,20 +487,42 @@ function Index() {
         </section>
 
         {/* Akan proverb strip */}
-        <section aria-label="Akan proverb" className="border-y border-border bg-forest text-ivory">
-          <div className="mx-auto max-w-5xl px-4 py-14 text-center sm:px-6 lg:px-8">
-            <p className="font-serif text-2xl italic leading-snug text-ivory sm:text-3xl">
-              &ldquo;Dua kor gye mframa a, ebu.&rdquo;
+        <section aria-label="Akan proverbs" className="relative overflow-hidden border-y border-border bg-forest text-ivory">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] kente-hairline" />
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center gap-4">
+              <GhanaFlag className="h-4 w-6 rounded-[1px] shadow-sm ring-1 ring-ivory/20" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
+                Wisdom from the Motherland
+              </p>
+              <GhanaFlag className="h-4 w-6 rounded-[1px] shadow-sm ring-1 ring-ivory/20" />
+            </div>
+
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
+              {proverbs.slice(0, 3).map((p) => (
+                <figure key={p.twi} className="relative rounded-lg border border-ivory/10 bg-ivory/[0.03] px-6 py-8 text-center">
+                  <span aria-hidden className="absolute left-3 top-2 font-serif text-4xl leading-none text-gold/50">&ldquo;</span>
+                  <blockquote className="font-serif text-lg italic leading-snug text-ivory sm:text-xl">
+                    {p.twi}
+                  </blockquote>
+                  <figcaption className="mt-3 text-xs leading-relaxed text-ivory/70">
+                    {p.en}
+                  </figcaption>
+                  <div className="mx-auto mt-4 h-[2px] w-16 kente-hairline" />
+                </figure>
+              ))}
+            </div>
+
+            <p className="mt-10 text-center text-[11px] uppercase tracking-[0.35em] text-gold">
+              Yɛn nyinaa yɛ baako · We are all one
             </p>
-            <p className="mt-3 text-sm text-ivory/75">
-              A single tree cannot withstand the storm — Akan proverb.
+            <p className="mt-2 text-center text-sm italic text-ivory/70">
+              &ldquo;{proverbs[3].twi}&rdquo; — {proverbs[3].en}
             </p>
-            <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-gold">
-              We build together · Yɛn nyinaa yɛ baako
-            </p>
-            <div className="mx-auto mt-6 h-[3px] w-40 kente-hairline" />
           </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] kente-hairline" />
         </section>
+
 
         {/* Factory */}
         <section id="factory" className="border-y border-border bg-charcoal py-24 text-ivory">
