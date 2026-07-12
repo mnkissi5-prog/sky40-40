@@ -93,6 +93,46 @@ const INSTAGRAM_URL = "https://instagram.com/sky4040_gh";
 const FACTORY_PLUSCODE = "V4HW+WQR, Beahu";
 const MAP_URL = "https://www.google.com/maps/search/?api=1&query=V4HW%2BWQR+Beahu+Takoradi";
 
+const proverbs = [
+  {
+    twi: "Dua kor gye mframa a, ebu.",
+    en: "A single tree cannot withstand the storm.",
+  },
+  {
+    twi: "Nsa baako nkura adesoa.",
+    en: "One hand alone cannot lift a heavy load — we build together.",
+  },
+  {
+    twi: "Praeɛ, wɔka wɔn baako a wobu, wɔka wɔn nyinaa a emmu.",
+    en: "A single broom stick breaks; a bundle stands strong.",
+  },
+  {
+    twi: "Tiri nkwa nyɛ abakan.",
+    en: "Life is long — build for generations, not for a season.",
+  },
+];
+
+function GhanaFlag({ className = "h-4 w-6" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 60 40"
+      className={className}
+      aria-label="Flag of Ghana"
+      role="img"
+    >
+      <rect width="60" height="40" fill="#ce1126" />
+      <rect y="13.33" width="60" height="13.34" fill="#fcd116" />
+      <rect y="26.67" width="60" height="13.33" fill="#006b3f" />
+      <polygon
+        points="30,15.5 31.76,20.9 37.44,20.9 32.84,24.24 34.6,29.64 30,26.3 25.4,29.64 27.16,24.24 22.56,20.9 28.24,20.9"
+        fill="#000"
+      />
+    </svg>
+  );
+}
+
+
+
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<Category>("All");
@@ -124,13 +164,15 @@ function Index() {
               className="h-11 w-auto object-contain"
             />
             <span className="hidden sm:block">
-              <span className="block text-base font-semibold leading-none tracking-tight text-foreground">
+              <span className="flex items-center gap-2 text-base font-semibold leading-none tracking-tight text-foreground">
                 SKY 4040
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
               </span>
               <span className="mt-1 block text-[10px] font-medium leading-none tracking-[0.35em] text-muted-foreground">
                 LIMITED · MANUFACTURER
               </span>
             </span>
+
           </a>
 
           <nav className="hidden items-center gap-7 md:flex">
@@ -208,11 +250,13 @@ function Index() {
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-12 lg:px-8 lg:py-40">
             <div className="lg:col-span-8">
               <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-ivory/25 bg-ivory/5 px-4 py-1.5 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] shadow-sm ring-1 ring-ivory/30" />
                 <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-ivory/90">
                   Est. 2024 · Manufactured in Takoradi, Ghana
                 </span>
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] shadow-sm ring-1 ring-ivory/30" />
               </div>
+
               <h1 className="font-serif text-balance text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl">
                 Ghana's premium tile
                 <br />
@@ -445,20 +489,42 @@ function Index() {
         </section>
 
         {/* Akan proverb strip */}
-        <section aria-label="Akan proverb" className="border-y border-border bg-forest text-ivory">
-          <div className="mx-auto max-w-5xl px-4 py-14 text-center sm:px-6 lg:px-8">
-            <p className="font-serif text-2xl italic leading-snug text-ivory sm:text-3xl">
-              &ldquo;Dua kor gye mframa a, ebu.&rdquo;
+        <section aria-label="Akan proverbs" className="relative overflow-hidden border-y border-border bg-forest text-ivory">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] kente-hairline" />
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center gap-4">
+              <GhanaFlag className="h-4 w-6 rounded-[1px] shadow-sm ring-1 ring-ivory/20" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
+                Wisdom from the Motherland
+              </p>
+              <GhanaFlag className="h-4 w-6 rounded-[1px] shadow-sm ring-1 ring-ivory/20" />
+            </div>
+
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
+              {proverbs.slice(0, 3).map((p) => (
+                <figure key={p.twi} className="relative rounded-lg border border-ivory/10 bg-ivory/[0.03] px-6 py-8 text-center">
+                  <span aria-hidden className="absolute left-3 top-2 font-serif text-4xl leading-none text-gold/50">&ldquo;</span>
+                  <blockquote className="font-serif text-lg italic leading-snug text-ivory sm:text-xl">
+                    {p.twi}
+                  </blockquote>
+                  <figcaption className="mt-3 text-xs leading-relaxed text-ivory/70">
+                    {p.en}
+                  </figcaption>
+                  <div className="mx-auto mt-4 h-[2px] w-16 kente-hairline" />
+                </figure>
+              ))}
+            </div>
+
+            <p className="mt-10 text-center text-[11px] uppercase tracking-[0.35em] text-gold">
+              Yɛn nyinaa yɛ baako · We are all one
             </p>
-            <p className="mt-3 text-sm text-ivory/75">
-              A single tree cannot withstand the storm — Akan proverb.
+            <p className="mt-2 text-center text-sm italic text-ivory/70">
+              &ldquo;{proverbs[3].twi}&rdquo; — {proverbs[3].en}
             </p>
-            <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-gold">
-              We build together · Yɛn nyinaa yɛ baako
-            </p>
-            <div className="mx-auto mt-6 h-[3px] w-40 kente-hairline" />
           </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] kente-hairline" />
         </section>
+
 
         {/* Factory */}
         <section id="factory" className="border-y border-border bg-charcoal py-24 text-ivory">
@@ -864,8 +930,15 @@ function Index() {
               </div>
             </div>
             <div className="mt-12 flex flex-col justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-              <p>© {new Date().getFullYear()} SKY 40 - 40 Company Ltd. Proudly Ghanaian manufacturer.</p>
-              <p>Registered in Ghana · VAT compliant</p>
+              <p className="flex items-center gap-2">
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+                © {new Date().getFullYear()} SKY 40 - 40 Company Ltd. Proudly Ghanaian manufacturer.
+              </p>
+              <p className="flex items-center gap-2">
+                Registered in Ghana · VAT compliant
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+              </p>
+
             </div>
           </div>
         </footer>
