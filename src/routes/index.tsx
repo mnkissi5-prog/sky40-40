@@ -930,8 +930,15 @@ function Index() {
               </div>
             </div>
             <div className="mt-12 flex flex-col justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-              <p>© {new Date().getFullYear()} SKY 40 - 40 Company Ltd. Proudly Ghanaian manufacturer.</p>
-              <p>Registered in Ghana · VAT compliant</p>
+              <p className="flex items-center gap-2">
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+                © {new Date().getFullYear()} SKY 40 - 40 Company Ltd. Proudly Ghanaian manufacturer.
+              </p>
+              <p className="flex items-center gap-2">
+                Registered in Ghana · VAT compliant
+                <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+              </p>
+
             </div>
           </div>
         </footer>
