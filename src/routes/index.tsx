@@ -379,6 +379,85 @@ function Index() {
           </div>
         </section>
 
+        {/* What is SPC? */}
+        <section id="what-is-spc" className="border-t border-border bg-ivory/40 py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-5">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
+                  What is SPC flooring?
+                </p>
+                <h2 className="mt-3 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+                  Stone Plastic Composite —
+                  <br />
+                  <em className="not-italic text-forest">built for Ghana.</em>
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                  SPC (Stone Plastic Composite) is a next-generation rigid-core
+                  flooring engineered from limestone powder, food-grade PVC and
+                  stabilisers, pressed into dense planks with a photo-real wood
+                  décor film and a diamond-hardened UV wear layer on top.
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  Unlike laminate, it will not swell in humidity. Unlike ceramic
+                  tile, it will not crack when a pot drops on it. Unlike solid
+                  timber, termites cannot eat it. It clicks together over almost
+                  any subfloor — no cement, no glue, no dust — so a full room
+                  can be laid and walked on the same day.
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  For Ghana's coastal humidity, harmattan dust, and family
+                  homes with children and pets, SPC is simply the smarter floor.
+                </p>
+                <dl className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6">
+                  {[
+                    { k: "5.5 mm", v: "Plank thickness" },
+                    { k: "20 mil", v: "Wear layer" },
+                    { k: "Bfl-s1", v: "Fire class" },
+                    { k: "100%", v: "Waterproof core" },
+                  ].map((s) => (
+                    <div key={s.v}>
+                      <dt className="font-serif text-2xl text-foreground">{s.k}</dt>
+                      <dd className="mt-1 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                        {s.v}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="overflow-hidden rounded-xl border border-border bg-background shadow-sm">
+                  <img
+                    src={layerStructureImg.url}
+                    alt="SKY 4040 SPC flooring layer structure — UV layer, wear layer, European décor film, rigid SPC core and soundproof IXPE pad — with Uniclic locking system and key features."
+                    className="w-full"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                  Layer structure & Uniclic lock — SKY 4040 factory spec sheet
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Akan proverb strip */}
+        <section aria-label="Akan proverb" className="border-y border-border bg-forest text-ivory">
+          <div className="mx-auto max-w-5xl px-4 py-14 text-center sm:px-6 lg:px-8">
+            <p className="font-serif text-2xl italic leading-snug text-ivory sm:text-3xl">
+              &ldquo;Dua kor gye mframa a, ebu.&rdquo;
+            </p>
+            <p className="mt-3 text-sm text-ivory/75">
+              A single tree cannot withstand the storm — Akan proverb.
+            </p>
+            <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-gold">
+              We build together · Yɛn nyinaa yɛ baako
+            </p>
+            <div className="mx-auto mt-6 h-[3px] w-40 kente-hairline" />
+          </div>
+        </section>
+
         {/* Factory */}
         <section id="factory" className="border-y border-border bg-charcoal py-24 text-ivory">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
