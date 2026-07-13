@@ -740,8 +740,39 @@ function Index() {
                 </li>
               ))}
             </ol>
+
+            {/* Regions we serve */}
+            <div className="mt-14 rounded-lg border border-border bg-background p-8">
+              <div className="flex flex-col items-center gap-3 text-center">
+                <div className="flex items-center gap-2">
+                  <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
+                    Delivering across Ghana
+                  </p>
+                  <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-border" />
+                </div>
+                <p className="max-w-xl text-sm text-muted-foreground">
+                  From our plant in the Western Region to every corner of the nation — and beyond, on request.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                {[
+                  "Takoradi", "Accra", "Tema", "Kumasi", "Cape Coast",
+                  "Tamale", "Ho", "Sunyani", "Koforidua", "Wa", "Bolgatanga",
+                  "ECOWAS on request",
+                ].map((r) => (
+                  <span
+                    key={r}
+                    className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground/80"
+                  >
+                    {r}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
+
 
         {/* Testimonial */}
         <section className="py-24">
