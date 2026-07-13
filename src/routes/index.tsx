@@ -583,6 +583,58 @@ function Index() {
           </div>
         </section>
 
+        {/* Inside the plant — production numbers */}
+        <section className="relative border-b border-border bg-forest text-ivory">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] kente-hairline" />
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center gap-3 text-center">
+              <div className="flex items-center gap-3">
+                <GhanaFlag className="h-4 w-6 rounded-[1px] ring-1 ring-ivory/20" />
+                <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
+                  Inside the plant · Egyam, Takoradi
+                </p>
+                <GhanaFlag className="h-4 w-6 rounded-[1px] ring-1 ring-ivory/20" />
+              </div>
+              <h2 className="mt-2 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
+                Ghanaian hands. Ghanaian craft. Global standard.
+              </h2>
+            </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { n: "45,000+", l: "m² produced per month" },
+                { n: "11", l: "signature SPC decors" },
+                { n: "20 mil", l: "diamond UV wear layer" },
+                { n: "100%", l: "made in Ghana" },
+              ].map((s) => (
+                <div key={s.l} className="border border-ivory/15 bg-ivory/[0.03] p-6 text-center">
+                  <p className="font-serif text-4xl text-gold">{s.n}</p>
+                  <p className="mt-2 text-[11px] uppercase tracking-[0.25em] text-ivory/75">
+                    {s.l}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {[
+                { t: "Extrusion line", d: "Twin-screw SPC extruders press the rigid limestone-PVC core to a dead-flat 5.5 mm." },
+                { t: "Décor & UV", d: "HD wood-grain film, IXPE acoustic pad and diamond-hardened UV coat cured in-line." },
+                { t: "Uniclic milling", d: "Precision-cut 1220 × 183 mm planks with a click-lock edge — no glue, no gaps." },
+              ].map((s) => (
+                <div key={s.t} className="border-l-2 border-gold/60 pl-4">
+                  <p className="font-serif text-lg text-ivory">{s.t}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-ivory/70">{s.d}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-10 text-center text-[11px] uppercase tracking-[0.35em] text-gold">
+              Nyansapo · The wisdom knot — patience, craft, forethought
+            </p>
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] kente-hairline" />
+        </section>
+
+
+
         {/* Capabilities (formerly values) */}
         <section id="capabilities" className="py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
