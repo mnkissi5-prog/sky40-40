@@ -146,9 +146,12 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Announcement bar */}
       <div className="border-b border-border bg-charcoal text-ivory">
-        <div className="mx-auto flex h-9 max-w-7xl items-center justify-center gap-2 px-4 text-center text-[11px] font-medium uppercase tracking-[0.25em]">
+        <div className="mx-auto flex h-9 max-w-7xl items-center justify-center gap-3 px-4 text-center text-[11px] font-medium uppercase tracking-[0.25em]">
+          <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-ivory/20" />
           <Sparkles className="h-3 w-3 text-gold" />
-          Ghanaian tile & flooring manufacturer · Egyam, Takoradi
+          Proudly made in Ghana · SPC flooring factory · Egyam, Takoradi
+          <Sparkles className="h-3 w-3 text-gold" />
+          <GhanaFlag className="h-3 w-[18px] rounded-[1px] ring-1 ring-ivory/20" />
         </div>
       </div>
 
