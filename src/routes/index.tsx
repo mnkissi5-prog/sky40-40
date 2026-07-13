@@ -540,20 +540,21 @@ function Index() {
                   Manufactured in Ghana.
                 </h2>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/75">
-                  SKY 4040 is not a shop — we are a Ghanaian tile and SPC
-                  flooring factory. We import the finest raw materials —
-                  Italian marble powder, Spanish porcelain clays, Turkish
-                  natural stone aggregates, European decor films — and press,
-                  glaze, fire and interlock every plank and tile at our
-                  Egyam, Takoradi plant. The result is world-class quality,
-                  produced by Ghanaian hands, priced for Ghanaian projects.
+                  SKY 4040 is not a shop — we are a specialized Ghanaian tile
+                  and SPC flooring factory. We source the highest grade raw
+                  materials — ultra fine limestone powder, premium food-grade
+                  PVC, high-definition wood-grain decor films, and press,
+                  extrude, and pricision-cut every plank at our Egyam,
+                  Takoradi plant. The result is world-class,
+                  weather-resistance flooring, produced by Ghanaian hands,
+                  priced for Ghanaian projects.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  { c: "Italy", d: "Marble powders & terrazzo aggregates" },
-                  { c: "Spain", d: "Porcelain clays & mineral glazes" },
-                  { c: "Türkiye", d: "Natural slate & travertine stone" },
+                  { c: "The Core", d: "Premium limestone powder & food-grade PVC stabilizers." },
+                  { c: "The Style", d: "High-definition, photo-real-wood grain decor films." },
+                  { c: "The Shield", d: "Diamond-hardend UV wear layers & scratch protection. " },
                 ].map((o) => (
                   <div key={o.c} className="border border-ivory/15 p-6">
                     <p className="font-serif text-2xl text-ivory">{o.c}</p>
