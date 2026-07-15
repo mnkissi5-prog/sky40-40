@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "sky4040-mcp",
+      "version": "0.1.0",
+      "title": "SKY 4040 LIMITED"
+    },
+    "tools": [
+      {
+        "name": "get_company_info",
+        "title": "Get company info",
+        "description": "Return SKY 40 - 40 Company Ltd (SKY 4040 LIMITED) company profile — founding year, slogan, factory location, and what we manufacture.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_contact_info",
+        "title": "Get contact info",
+        "description": "Return SKY 4040's phone/WhatsApp, email, Instagram handle, and factory address for enquiries and quotes.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_products",
+        "title": "List SPC flooring collections",
+        "description": "List SKY 4040's SPC wood-look flooring collections. Optionally filter by tone (Light, Warm, Dark, Grey).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "tone": {
+              "description": "Optional tone filter.",
+              "type": "string",
+              "enum": [
+                "Light",
+                "Warm",
+                "Dark",
+                "Grey"
+              ]
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_spc_info",
+        "title": "About SPC flooring",
+        "description": "Explain what SPC (Stone Plastic Composite) flooring is, its layer structure, and why it suits Ghana's climate.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_trade_terms",
+        "title": "Trade & delivery terms",
+        "description": "Return SKY 4040's factory trade terms — MOQ, delivery lead times across Ghana, ECOWAS export, and quote process.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
