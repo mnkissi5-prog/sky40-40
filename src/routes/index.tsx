@@ -40,6 +40,7 @@ import spcClassicWalnut from "@/assets/spc-classic-walnut.jpg";
 import spcNordikOak from "@/assets/spc-nordik-oak.jpg";
 import spcHeritageTeak from "@/assets/spc-heritage-teak.jpg";
 import spcDriftwoodOak from "@/assets/spc-driftwood-oak.jpg";
+import spcAlmondWhite from "@/assets/spc-almond-white.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -69,6 +70,7 @@ const products: Product[] = [
   { id: "hazelnut", name: "Hazelnut", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Soft matte", image: spcHazelnut, tone: "Light" },
   { id: "sandstone-oak", name: "Sandstone Oak", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcSandstoneOak, tone: "Light" },
   { id: "nordik-oak", name: "Nordik Oak", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcNordikOak, tone: "Light", tag: "New" },
+  { id: "almond-white", name: "Almond White", collection: "Naturals SPC", size: SPC_SPEC, finish: "Uniclic lock · Soft matte", image: spcAlmondWhite, tone: "Light", tag: "New" },
   { id: "rustic-grey", name: "Rustic Grey", collection: "Contemporary SPC", size: SPC_SPEC, finish: "Uniclic lock · Embossed", image: spcRusticGrey, tone: "Grey" },
   { id: "driftwood-oak", name: "Driftwood Oak", collection: "Contemporary SPC", size: SPC_SPEC, finish: "Uniclic lock · Matte", image: spcDriftwoodOak, tone: "Grey" },
 ];
