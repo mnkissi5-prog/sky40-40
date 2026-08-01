@@ -54,7 +54,9 @@ function ConsentPage() {
   const { authorization_id } = Route.useSearch();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const clientName = details?.client?.name ?? "an AI assistant";
+  const clientName = details && "client" in details
+    ? details.client?.name ?? "an AI assistant"
+    : "an AI assistant";
 
   async function decide(approve: boolean) {
     setBusy(true);
