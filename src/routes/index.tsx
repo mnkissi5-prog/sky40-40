@@ -446,15 +446,14 @@ function Index() {
                       </p>
                     </div>
                   </div>
-                  <a href="#contact" className="mt-4 block">
-                    <Button
-                      variant="outline"
-                      className="w-full gap-2 rounded-full border-foreground/20"
-                      size="sm"
-                    >
-                      Request quote <ArrowRight className="h-3.5 w-3.5" />
-                    </Button>
-                  </a>
+                  <Button
+                    variant="outline"
+                    onClick={() => requestQuote(p.id)}
+                    className="mt-4 w-full gap-2 rounded-full border-foreground/20"
+                    size="sm"
+                  >
+                    Request quote <ArrowRight className="h-3.5 w-3.5" />
+                  </Button>
                 </article>
               ))}
             </div>
