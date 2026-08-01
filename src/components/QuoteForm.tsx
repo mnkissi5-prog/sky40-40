@@ -234,7 +234,6 @@ export function QuoteForm({
                       {p.name} — {p.collection}
                     </SelectItem>
                   ))}
-                </SelectItem>
                 </SelectContent>
               </Select>
             </div>
