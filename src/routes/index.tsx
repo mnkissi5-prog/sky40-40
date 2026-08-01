@@ -51,8 +51,22 @@ import spcHeritageTeak from "@/assets/spc-heritage-teak.jpg";
 import spcDriftwoodOak from "@/assets/spc-driftwood-oak.jpg";
 import spcAlmondWhite from "@/assets/spc-almond-white.jpg";
 
+const PAGE_TITLE = "SKY 4040 — Ghana's Premium SPC Tile Flooring Factory";
+const PAGE_DESC =
+  "SKY 40-40 Company Ltd manufactures premium SPC tile flooring in Egyam, Takoradi from imported raw materials. Direct-from-factory supply for developers, contractors and retailers.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: PAGE_TITLE },
+      { name: "description", content: PAGE_DESC },
+      { property: "og:title", content: PAGE_TITLE },
+      { property: "og:description", content: PAGE_DESC },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
 });
 
 type Tone = "Dark" | "Warm" | "Light" | "Grey";
@@ -273,9 +287,9 @@ function Index() {
               </div>
 
               <h1 className="font-serif text-balance text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl">
-                Ghana's premium tile
+                Ghana's premium SPC
                 <br />
-                & SPC flooring
+                tile flooring
                 <br />
                 <em className="not-italic text-gold">manufacturer.</em>
               </h1>
@@ -1044,7 +1058,7 @@ function Index() {
                   </div>
                 </div>
                 <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Ghanaian tile and SPC flooring manufacturer, producing in
+                  Ghanaian SPC tile flooring manufacturer, producing in
                   Egyam, Takoradi from the finest imported raw materials.
                   Walk as a millionaire.
                 </p>
