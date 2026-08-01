@@ -91,6 +91,7 @@ const navLinks = [
   { label: "Catalogue", href: "#catalogue" },
   { label: "What is SPC?", href: "#what-is-spc" },
   { label: "The Factory", href: "#factory" },
+  { label: "Factory Catalogue", href: "#factory-catalog" },
   { label: "Why Us", href: "#unique" },
   { label: "Trade & Projects", href: "#trade" },
   { label: "Contact", href: "#contact" },
