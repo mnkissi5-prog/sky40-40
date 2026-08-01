@@ -78,18 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SKY 4040 LIMITED — Tile & SPC Flooring Manufacturer, Ghana" },
+      { title: "SKY 4040 LIMITED — SPC Tile Flooring Manufacturer, Ghana" },
       {
         name: "description",
         content:
           "SKY 40 - 40 Company Ltd is a Ghanaian factory manufacturing premium marble, porcelain, terrazzo, slate, mosaic and SPC wood-look flooring in Egyam, Takoradi. Trade & project supply nationwide.",
       },
       { name: "author", content: "SKY 40 - 40 Company Ltd" },
-      { property: "og:title", content: "SKY 4040 LIMITED — Tile & SPC Flooring Manufacturer, Ghana" },
+      { property: "og:title", content: "SKY 4040 LIMITED — SPC Tile Flooring Manufacturer, Ghana" },
       {
         property: "og:description",
         content:
-          "Ghanaian tile & SPC flooring factory in Egyam, Takoradi. Imported raw materials, manufactured in Ghana. Direct-from-factory supply for developers, contractors and retailers.",
+          "Ghanaian SPC tile flooring factory in Egyam, Takoradi. Imported raw materials, manufactured in Ghana. Direct-from-factory supply for developers, contractors and retailers.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
