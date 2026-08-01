@@ -20,6 +20,15 @@ import { toast } from "sonner";
 import { CompanyChat } from "@/components/CompanyChat";
 import whyChooseImg from "@/assets/spc-why-choose.png.asset.json";
 import layerStructureImg from "@/assets/spc-layer-structure.png.asset.json";
+import facExterior from "@/assets/factory-IMG_1100.jpg.asset.json";
+import facHall from "@/assets/factory-IMG_1102.jpg.asset.json";
+import facLine from "@/assets/factory-IMG_1103.jpg.asset.json";
+import facOperator from "@/assets/factory-IMG_1108.jpg.asset.json";
+import facFloor from "@/assets/factory-IMG_1109.jpg.asset.json";
+import facSafetySign from "@/assets/factory-IMG_1110.jpg.asset.json";
+import facManifold from "@/assets/factory-IMG_9407.jpg.asset.json";
+import facNotice from "@/assets/factory-IMG_9408.jpg.asset.json";
+import facMill from "@/assets/factory-IMG_9410.jpg.asset.json";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -82,6 +91,7 @@ const navLinks = [
   { label: "Catalogue", href: "#catalogue" },
   { label: "What is SPC?", href: "#what-is-spc" },
   { label: "The Factory", href: "#factory" },
+  { label: "Factory Catalogue", href: "#factory-catalog" },
   { label: "Why Us", href: "#unique" },
   { label: "Trade & Projects", href: "#trade" },
   { label: "Contact", href: "#contact" },
@@ -638,6 +648,66 @@ function Index() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] kente-hairline" />
         </section>
 
+        {/* Factory catalogue — real plant photography */}
+        <section id="factory-catalog" className="py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="flex items-center gap-3">
+                <GhanaFlag className="h-4 w-6 rounded-[1px] ring-1 ring-border" />
+                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
+                  Factory Catalogue
+                </p>
+                <GhanaFlag className="h-4 w-6 rounded-[1px] ring-1 ring-border" />
+              </div>
+              <h2 className="mt-3 max-w-3xl font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+                Our plant in Egyam, Takoradi.
+              </h2>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                Not stock photography — this is the SKY 4040 production floor:
+                extrusion lines, chillers, UV décor units, Uniclic milling and
+                the safety standards our team works to every day.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { src: facExterior.url, t: "The Plant", d: "Our production halls at Egyam, Western Region." },
+                { src: facHall.url, t: "Finishing Line", d: "UV curing and surface finishing under one roof." },
+                { src: facLine.url, t: "Extrusion Line", d: "Twin-screw SPC extruders feeding the calender stack." },
+                { src: facFloor.url, t: "Main Floor", d: "45,000+ m² of monthly capacity across the shop floor." },
+                { src: facOperator.url, t: "Ghanaian Hands", d: "Our operators running the mixing and feed manifold." },
+                { src: facManifold.url, t: "Chiller Manifold", d: "Temperature control that keeps every plank dead-flat." },
+                { src: facMill.url, t: "Précision Milling", d: "NivéSal profiling for the Uniclic click-lock edge." },
+                { src: facSafetySign.url, t: "Safety First", d: "PPE mandatory across all production zones." },
+                { src: facNotice.url, t: "Plant Standards", d: "Mandatory signage governing every working area." },
+              ].map((p) => (
+                <figure
+                  key={p.t}
+                  className="group overflow-hidden border border-border bg-card"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={p.src}
+                      alt={`SKY 4040 SPC flooring factory — ${p.t}: ${p.d}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <figcaption className="border-t border-border p-5">
+                    <p className="font-serif text-xl text-foreground">{p.t}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      {p.d}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <p className="mt-10 text-center text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+              Factory visits by appointment only · V4HW+WQR, Beahu
+            </p>
+          </div>
+        </section>
 
 
         {/* Capabilities (formerly values) */}
