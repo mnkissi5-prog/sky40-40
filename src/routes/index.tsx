@@ -20,6 +20,15 @@ import { toast } from "sonner";
 import { CompanyChat } from "@/components/CompanyChat";
 import whyChooseImg from "@/assets/spc-why-choose.png.asset.json";
 import layerStructureImg from "@/assets/spc-layer-structure.png.asset.json";
+import facExterior from "@/assets/factory-IMG_1100.jpg.asset.json";
+import facHall from "@/assets/factory-IMG_1102.jpg.asset.json";
+import facLine from "@/assets/factory-IMG_1103.jpg.asset.json";
+import facOperator from "@/assets/factory-IMG_1108.jpg.asset.json";
+import facFloor from "@/assets/factory-IMG_1109.jpg.asset.json";
+import facSafetySign from "@/assets/factory-IMG_1110.jpg.asset.json";
+import facManifold from "@/assets/factory-IMG_9407.jpg.asset.json";
+import facNotice from "@/assets/factory-IMG_9408.jpg.asset.json";
+import facMill from "@/assets/factory-IMG_9410.jpg.asset.json";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
