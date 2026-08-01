@@ -1,15 +1,19 @@
 {
   "version": 1,
-  "sdk_version": "0.22.1",
+  "sdk_version": "0.26.1",
   "path": "/mcp",
   "auth": {
-    "type": "none"
+    "type": "oauth",
+    "issuer": "https://ikreiguymzgytqduzqod.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
   },
   "mcp": {
     "server": {
-      "name": "sky4040-mcp",
+      "name": "takoradi-millionaire-walk",
       "version": "0.1.0",
-      "title": "SKY 4040 LIMITED"
+      "title": "Takoradi Millionaire Walk"
     },
     "tools": [
       {
