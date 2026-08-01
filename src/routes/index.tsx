@@ -163,6 +163,12 @@ function GhanaFlag({ className = "h-4 w-6" }: { className?: string }) {
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [quoteProductId, setQuoteProductId] = useState<string>(products[0].id);
+
+  const requestQuote = (id: string) => {
+    setQuoteProductId(id);
+    document.getElementById("quote")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   const filtered =
     activeCategory === "All"
