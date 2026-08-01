@@ -273,9 +273,9 @@ function Index() {
               </div>
 
               <h1 className="font-serif text-balance text-5xl leading-[1.02] text-ivory sm:text-6xl lg:text-7xl">
-                Ghana's premium tile
+                Ghana's premium SPC
                 <br />
-                & SPC flooring
+                tile flooring
                 <br />
                 <em className="not-italic text-gold">manufacturer.</em>
               </h1>
