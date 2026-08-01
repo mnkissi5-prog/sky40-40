@@ -22,8 +22,8 @@ export const Route = createFileRoute("/.lovable/oauth/consent")({
     if (!authorizationId) throw new Error("This authorization request is invalid.");
     const { data, error } = await supabase.auth.oauth.getAuthorizationDetails(authorizationId);
     if (error) throw error;
-    const immediate = data?.redirect_url ?? data?.redirect_to;
-    if (immediate && !data?.client) throw redirect({ href: immediate });
+    const immediate = data && "redirect_url" in data ? data.redirect_url : undefined;
+    if (immediate && !("client" in data)) throw redirect({ href: immediate });
     return data;
   },
   head: () => ({
@@ -67,7 +67,7 @@ function ConsentPage() {
       setError(result.error.message);
       return;
     }
-    const target = result.data?.redirect_url ?? result.data?.redirect_to;
+    const target = result.data?.redirect_url;
     if (!target) {
       setBusy(false);
       setError("The authorization service did not return a destination.");
