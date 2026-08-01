@@ -1058,7 +1058,7 @@ function Index() {
                   </div>
                 </div>
                 <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Ghanaian tile and SPC flooring manufacturer, producing in
+                  Ghanaian SPC tile flooring manufacturer, producing in
                   Egyam, Takoradi from the finest imported raw materials.
                   Walk as a millionaire.
                 </p>
