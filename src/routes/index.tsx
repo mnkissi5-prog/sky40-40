@@ -16,8 +16,8 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner";
 import { CompanyChat } from "@/components/CompanyChat";
+import { QuoteForm } from "@/components/QuoteForm";
 import whyChooseImg from "@/assets/spc-why-choose.png.asset.json";
 import layerStructureImg from "@/assets/spc-layer-structure.png.asset.json";
 import facExterior from "@/assets/factory-IMG_1100.jpg.asset.json";
@@ -162,6 +162,12 @@ function GhanaFlag({ className = "h-4 w-6" }: { className?: string }) {
 function Index() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [quoteProductId, setQuoteProductId] = useState<string>(products[0].id);
+
+  const requestQuote = (id: string) => {
+    setQuoteProductId(id);
+    document.getElementById("quote")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   const filtered =
     activeCategory === "All"
@@ -439,15 +445,14 @@ function Index() {
                       </p>
                     </div>
                   </div>
-                  <a href="#contact" className="mt-4 block">
-                    <Button
-                      variant="outline"
-                      className="w-full gap-2 rounded-full border-foreground/20"
-                      size="sm"
-                    >
-                      Request quote <ArrowRight className="h-3.5 w-3.5" />
-                    </Button>
-                  </a>
+                  <Button
+                    variant="outline"
+                    onClick={() => requestQuote(p.id)}
+                    className="mt-4 w-full gap-2 rounded-full border-foreground/20"
+                    size="sm"
+                  >
+                    Request quote <ArrowRight className="h-3.5 w-3.5" />
+                  </Button>
                 </article>
               ))}
             </div>
@@ -964,82 +969,15 @@ function Index() {
               </div>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("Enquiry received", {
-                  description: "Our production team will contact you within one working day.",
-                });
-                (e.currentTarget as HTMLFormElement).reset();
-              }}
-              className="rounded-none border border-ivory/15 bg-ivory/5 p-8 backdrop-blur"
-            >
-              <h3 className="font-serif text-2xl text-ivory">Factory enquiry</h3>
-              <p className="mt-1 text-xs text-ivory/60">
-                Tell us about your project.
-              </p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="space-y-1.5">
-                  <Label htmlFor="q-name" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
-                    Full name
-                  </Label>
-                  <Input
-                    id="q-name"
-                    required
-                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
-                  />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="q-company" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
-                    Company name
-                  </Label>
-                  <Input
-                    id="q-company"
-                    placeholder="Company / project name"
-                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
-                  />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="q-phone" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
-                    Phone
-                  </Label>
-                  <Input
-                    id="q-phone"
-                    type="tel"
-                    required
-                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
-                  />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="q-email" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
-                    Email
-                  </Label>
-                  <Input
-                    id="q-email"
-                    type="email"
-                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
-                  />
-                </div>
-                <div className="space-y-1.5 sm:col-span-2">
-                  <Label htmlFor="q-msg" className="text-[10px] uppercase tracking-[0.25em] text-ivory/70">
-                    Project details
-                  </Label>
-                  <Textarea
-                    id="q-msg"
-                    rows={4}
-                    placeholder="Type of project, approximate m², location, preferred finish…"
-                    className="border-ivory/25 bg-transparent text-ivory placeholder:text-ivory/40"
-                  />
-                </div>
-              </div>
-              <Button
-                type="submit"
-                size="lg"
-                className="mt-6 w-full rounded-full bg-gold text-charcoal hover:bg-gold/90"
-              >
-                Send enquiry
-              </Button>
-            </form>
+            <div id="quote">
+              <QuoteForm
+                products={products}
+                productId={quoteProductId}
+                onProductChange={setQuoteProductId}
+                phoneTel={PHONE_TEL}
+                email={EMAIL}
+              />
+            </div>
           </div>
         </section>
 
