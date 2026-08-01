@@ -18,6 +18,7 @@ import {
 import { useState } from "react";
 import { toast } from "sonner";
 import { CompanyChat } from "@/components/CompanyChat";
+import { QuoteForm } from "@/components/QuoteForm";
 import whyChooseImg from "@/assets/spc-why-choose.png.asset.json";
 import layerStructureImg from "@/assets/spc-layer-structure.png.asset.json";
 import facExterior from "@/assets/factory-IMG_1100.jpg.asset.json";
