@@ -66,6 +66,9 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroShowroom, fetchpriority: "high" },
+    ],
   }),
 });
 
@@ -278,6 +281,8 @@ function Index() {
               className="h-full w-full object-cover"
               width={1600}
               height={1000}
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/55 to-charcoal/20" />
           </div>
@@ -414,6 +419,7 @@ function Index() {
                       src={p.image}
                       alt={`${p.name} tile manufactured by SKY 4040`}
                       loading="lazy"
+                      decoding="async"
                       width={800}
                       height={800}
                       className="aspect-square w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -512,6 +518,7 @@ function Index() {
                     alt="SKY 4040 SPC flooring layer structure — UV layer, wear layer, European décor film, rigid SPC core and soundproof IXPE pad — with Uniclic locking system and key features."
                     className="w-full"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
@@ -709,6 +716,7 @@ function Index() {
                       src={p.src}
                       alt={`SKY 4040 SPC flooring factory — ${p.t}: ${p.d}`}
                       loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
@@ -795,6 +803,7 @@ function Index() {
                 alt="Why choose SKY 4040 SPC flooring — anti-slippery, fire resistant, sound insulation, stain resistant, water resistant, highly durable, easy to install and scratch resistant"
                 className="w-full"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
