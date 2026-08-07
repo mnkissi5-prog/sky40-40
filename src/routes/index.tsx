@@ -283,7 +283,7 @@ function Index() {
               height={1000}
               fetchPriority="high"
               decoding="async"
-            />�
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/55 to-charcoal/20" />
           </div>
 
